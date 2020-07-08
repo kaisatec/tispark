@@ -44,7 +44,6 @@ public class ChannelFactory implements AutoCloseable {
           // So a coarse grain lock is ok here
           return ManagedChannelBuilder.forAddress(address.getHost(), address.getPort())
               .maxInboundMessageSize(maxFrameSize)
-              .usePlaintext(true)
               .idleTimeout(60, TimeUnit.SECONDS)
               .build();
         });
