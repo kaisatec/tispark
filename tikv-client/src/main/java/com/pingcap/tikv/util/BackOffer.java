@@ -17,7 +17,6 @@
 
 package com.pingcap.tikv.util;
 
-import com.pingcap.tikv.TTLManager;
 
 public interface BackOffer {
   // Back off types.
@@ -35,7 +34,6 @@ public interface BackOffer {
   int GC_DELETE_RANGE_MAX_BACKOFF = 100 * seconds;
   int RAWKV_MAX_BACKOFF = 40 * seconds;
   int SPLIT_REGION_BACKOFF = 20 * seconds;
-  int BATCH_PREWRITE_BACKOFF = TTLManager.MANAGED_LOCK_TTL;
   int BATCH_COMMIT_BACKOFF = 10 * seconds;
   int PD_INFO_BACKOFF = 5 * seconds;
 
