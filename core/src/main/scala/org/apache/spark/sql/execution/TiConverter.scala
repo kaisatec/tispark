@@ -37,6 +37,7 @@ object TiConverter {
         new DecimalType(prec, scale)
       case _: sql.types.TimestampType => TimestampType.TIMESTAMP
       case _: sql.types.DateType => DateType.DATE
+      case _: sql.types.BooleanType => BitType.BIT
     }
 
   /**
